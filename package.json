@@ -1,0 +1,16 @@
+{
+  "name": "freetally",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shared counter for people coming through the doors at an event",
+  "author": "Ali Robertson",
+  "license": "MIT",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13"
+  },
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "test": "go test ./... && node test/run.mjs"
+  }
+}

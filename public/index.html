@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FreeTally</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Crect width=%2216%22 height=%2216%22 rx=%223%22 fill=%22%231f6f4a%22/%3E%3Cpath d=%22M4 3v10M7 3v10M10 3v10M2 11l12-6%22 stroke=%22%23fff%22 stroke-width=%221.5%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <main>
+    <h1>FreeTally</h1>
+    <p class="muted">A counter several people can add to at once. Make one, then let others scan the QR code to join in.</p>
+
+    <form id="create">
+      <label for="name">What are you counting?</label>
+      <input id="name" maxlength="80" required placeholder="Front door, Saturday" autocomplete="off">
+      <label for="capacity">Capacity <span class="muted">(optional)</span></label>
+      <p class="muted">The count turns amber near this number and red at it.</p>
+      <input id="capacity" type="number" inputmode="numeric" min="1" step="1" placeholder="300">
+      <button type="submit" class="primary">Start a tally</button>
+      <p id="error" class="error" role="alert" hidden></p>
+    </form>
+
+    <section id="recent" hidden>
+      <h2>Tallies you've opened</h2>
+      <ul id="recent-list" class="links"></ul>
+    </section>
+  </main>
+  <script type="module" src="/home.js"></script>
+</body>
+</html>

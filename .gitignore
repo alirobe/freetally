@@ -1,0 +1,9 @@
+node_modules
+data
+
+# Local deployment details, not published
+DEPLOYMENT.md
+scripts/deploy.ps1
+scripts/remote-deploy.sh
+
+.claude

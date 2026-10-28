@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin - FreeTally</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Crect width=%2216%22 height=%2216%22 rx=%223%22 fill=%22%231f6f4a%22/%3E%3Cpath d=%22M4 3v10M7 3v10M10 3v10M2 11l12-6%22 stroke=%22%23fff%22 stroke-width=%221.5%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+  <main class="wide">
+    <h1>All tallies</h1>
+    <p id="summary" class="muted">Loading</p>
+    <p id="error" class="error" role="alert" hidden></p>
+    <section id="owner-link" class="owner-link" hidden>
+      <h2 id="owner-link-heading">Owner link</h2>
+      <p class="muted">Send this to the person who runs the tally. Opening it lets their browser edit the name and capacity. Any browser that could edit it before, and any older owner link, no longer can.</p>
+      <div class="row">
+        <input id="owner-link-url" readonly aria-labelledby="owner-link-heading">
+        <button id="owner-link-copy" type="button">Copy</button>
+        <button id="owner-link-close" type="button">Done</button>
+      </div>
+    </section>
+    <div class="table-wrap">
+      <table id="tallies" hidden>
+        <thead>
+          <tr>
+            <th>Tally</th>
+            <th class="num">Total</th>
+            <th class="num">Visitors</th>
+            <th class="num">Changes</th>
+            <th class="num">People</th>
+            <th>Last change</th>
+            <th>Created</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </main>
+  <script type="module" src="/admin.js"></script>
+</body>
+</html>

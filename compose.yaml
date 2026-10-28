@@ -1,0 +1,18 @@
+services:
+  freetally:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      # Address phones should open, e.g. https://tally.example.com. Leave empty to use the request's host.
+      PUBLIC_URL: ${PUBLIC_URL:-}
+      # The admin view is at /admin/<ADMIN_KEY>. At least 32 characters; leave empty to turn it off.
+      ADMIN_KEY: ${ADMIN_KEY:-}
+      # Behind a proxy, the header it puts the visitor's address in, e.g. X-Forwarded-For. Leave empty without one.
+      CLIENT_IP_HEADER: ${CLIENT_IP_HEADER:-}
+    volumes:
+      - freetally-data:/data
+    restart: unless-stopped
+
+volumes:
+  freetally-data:

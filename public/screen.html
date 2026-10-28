@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{name}} - FreeTally</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22%3E%3Crect width=%2216%22 height=%2216%22 rx=%223%22 fill=%22%231f6f4a%22/%3E%3Cpath d=%22M4 3v10M7 3v10M10 3v10M2 11l12-6%22 stroke=%22%23fff%22 stroke-width=%221.5%22/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/app.css">
+  <link rel="modulepreload" href="/live.js">
+  <link rel="modulepreload" href="/fx.js">
+  <script type="module" src="/screen.js" blocking="render"></script>
+  <script id="snapshot" type="application/json">{{snapshot}}</script>
+</head>
+<body class="screen">
+  <main class="screen-main">
+    <h1 id="title">{{name}}</h1>
+    <div id="total-box" class="total">
+      <output id="total" class="odometer">0</output>
+      <p id="capacity" class="capacity slot"></p>
+      <p id="visitors" class="muted slot"></p>
+    </div>
+    <p id="recent" class="muted slot"></p>
+    <p id="status" class="status off">&#9679; Connecting</p>
+  </main>
+  <button id="sound" type="button" class="sound" aria-pressed="false">Sound off</button>
+</body>
+</html>
